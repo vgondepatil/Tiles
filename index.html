@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tile Matching Game</title>
+  <link rel="icon" href="/favicon.ico?=v3" type="image/x-icon" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="/styles/styles.css">
+
+  <script src="/scripts/index.js" type="module"></script>
+
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Tile Matching Game</h1>
+    <!-- <button type="button" class="i-btn btn btn-info" data-bs-container="body" data-bs-toggle="popover"
+      data-bs-placement="bottom" data-bs-content="Flip the tiles over and match them in pairs to win."><i
+        class="fa-solid fa-info"></i></button> -->
+    <button type="button" class="i-btn btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Flip the tiles over and match them in pairs to win.">
+      <i class="fa-solid fa-info"></i>
+    </button>
+  </header>
+  <main>
+    <section class="tile-grid-section">
+      <div class="controls">
+        <div class="time-display display">
+          <h5 class="time-title display-title">Time (s)</h5>
+          <span class="time display-value">0</span>
+        </div>
+        <div class="guesses-display display">
+          <h5 class="guesses-title display-title">Guesses</h5>
+          <span class="guesses display-value">0</span>
+        </div>
+        <button type="button" class="restart-btn btn btn-info">Restart</button>
+      </div>
+      <div class="tile-grid">
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+        <button type="button" class="tile btn btn-secondary"><i class="fa-sharp fa-solid fa-question"></i></button>
+      </div>
+    </section>
+    <section class="congrats-modal-section">
+      <div class="modal fade" id="congrats-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="congrats-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="congrats-modal-label">Congrats!! 🎉🎉🎉</h1>
+            </div>
+            <div class="modal-body">
+              You finished in <span class="modal-time-value">65</span> seconds and <span
+                class="modal-guesses-value">25</span> guesses 👏👏
+              <br><br>
+              Play again and see if you can improve!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary play-again-btn">Play Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"
+    integrity="sha512-6UofPqm0QupIL0kzS/UIzekR73/luZdC6i/kXDbWnLOJoqwklBK6519iUnShaYceJ0y4FaiPtX/hRnV/X/xlUQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
